@@ -38,8 +38,7 @@ The `./mod/` directory needs to be backed up before updating, it will be overwri
 
 2. Write the php file content as the following template:
 
-`
-<?php
+`<?php
  
 class SHOW_REPOS_MOD_{{PLANT_NAME}} {
  
@@ -87,13 +86,11 @@ class SHOW_REPOS_MOD_{{PLANT_NAME}} {
  
 	}
  
-}
-`
+}`
 
 3. Add and write the html template file in the directory `./mod/template/`, which want to display in the shortcode, and add such label where want to display the specified infomation:
 
-`
-	{{name}} => Repo's name
+`	{{name}} => Repo's name
  
 	{{description}} => Repo's description
  
@@ -119,8 +116,7 @@ class SHOW_REPOS_MOD_{{PLANT_NAME}} {
  
 	{{mtime}} => Repo's last updated time
  
-	{{ptime}} => Repo's last pushed time
-`
+	{{ptime}} => Repo's last pushed time`
 
 4. Add the css/js file to the directory `./mod/template/css/` / `./mod/template/js/` as if needed, and name it(s) to the plant name (format: {{plant name}}.js / {{plant name}}.css)
 
@@ -142,7 +138,8 @@ class SHOW_REPOS_MOD_{{PLANT_NAME}} {
 
 ## Changelog 
 
-= 1.0.0 =
+### 1.0.0 
+
 * The first version.
 
 ## Upgrade Notice 
