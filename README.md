@@ -29,7 +29,7 @@ The `./mod/` directory needs to be backed up before updating, it will be overwri
 ### How to extend the other code-managed plant (or the likely service)? 
 1. Create a php file in `./mod/` directory, and name it to the plant name (format: {{plant name}}.php).
 2. Write the php file content as the following template:
-```
+```php
 <?php 
 class SHOW_REPOS_MOD_{{PLANT_NAME}} {
  	public $api_url 		= '{{url}}'; //Plant api url that point to repo, usual it is such: https://{{url}}/{:user}/{:repo} 	
