@@ -1,0 +1,111 @@
+.osc_pro_color {
+	color: #4183c4 !important;
+}
+.osc_panel_color {
+	background-color: #ffffff !important;
+}
+.osc_background_color {
+	background-color: #ffffff !important;
+}
+.osc_border_color {
+	border-color: #e3e9ed !important;
+}
+.osc_desc_color {
+	color: #666666 !important;
+}
+.osc_link_color * {
+	color: #9b9b9b !important;
+}
+.osc_git_box{
+	padding: 0px !important;
+	border: 1px solid #E3E9ED;
+	background-color: #FFF;
+	border-radius:3px;
+}
+.osc_git_box *{
+	font-family:helvetica, arial, sans-serif;
+}
+.osc_git_box a{
+	color:#9B9B9B;
+	border:0;
+	text-decoration:none;
+}
+.osc_git_box .row_left{
+	float:left;
+}
+.osc_git_box .row_right{
+	float:right;
+}
+.osc_git_box .row_clear{
+	clear:both;
+}
+.osc_git_box .osc_git_title{
+	position:relative;
+	border-bottom:1px solid #ddd;
+	border-radius:3px 3px 0 0;
+	_height: 1%;
+	overflow: hidden;
+	padding: 0 15px 0 10px;
+	height:46px;
+	line-height:46px;
+}
+.osc_git_box .osc_git_title h3{
+	font-size:16px;
+	color:#0088CC;
+	margin:0;
+	padding: 13px 1px 1px 1px;
+	line-height: 20px;
+}
+.osc_git_box .osc_git_title .osc_git_proname{
+	height:20px;
+	overflow:hidden;
+	line-height:20px;
+	margin-left:10px;
+	max-width: 65%;
+}
+.osc_git_box .osc_git_title .osc_git_forkstar{
+	font-size:12px;
+	background-repeat:no-repeat;
+	font-weight:normal;
+}
+.osc_git_box .osc_git_main{
+	color: #9B9B9B;
+}
+.osc_git_box .osc_git_main .osc_git_info{
+	padding:10px;
+	font-size:14px;
+}
+.osc_git_box .osc_git_main .osc_git_issuecommits{
+	padding:0 10px 10px;
+	overflow:hidden;
+	_height:1%;
+}
+.osc_git_box .osc_git_main ul{
+	width:100%;
+	margin:0;
+	padding:0;
+	padding-top:2px;
+	font-size:14px;
+	list-style-type:none;
+}
+.osc_git_box .osc_git_main ul li{
+	width:inherit;
+	white-space:nowrap;
+}
+.osc_git_box .osc_git_main ul li .row_left{
+	overflow:hidden;
+	max-width:85%;
+}
+.osc_git_box .osc_git_main ul li .row_right{
+	overflow:hidden;
+}
+.osc_git_box .osc_git_footer{
+	padding: 10px;
+	line-height: 1.2;
+	border-top:1px solid #ddd;
+	font-size:14px;
+}
+.osc_git_box .osc_git_copyright{
+	text-align:center;
+	font-weight:bold;
+}

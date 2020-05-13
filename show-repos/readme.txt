@@ -1,33 +1,46 @@
-# Show-Repos
-A WordPress plugin that can make you to show your repo(s) on the wordpress through a simple shortcode. Modular structure, on-demand expansion, open source code. Show the code-managed repositories: GitHub, Gitee.
+=== Show Repos ===
+Contributors: joytou
+Tags: github, gitee, repository, git
+Requires at least: 5.0
+Tested up to: 5.4
+Stable tag: 1.0
+Requires PHP: 5.4
+License: GPLv2
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-## How to Use
+Show your repo(s) on the wordpress through a simple shortcode. Modular structure, on-demand expansion, open source code. Show the code-managed repositories: GitHub, Gitee.
+
+== Description ==
+
+Show your repo(s) on the wordpress through a simple shortcode. 
+
+= How to Use =
 
 Add the shortcode to anywhere you want to display: `[show-repo src="{{code-managed plant}}" user="{{username that the repo want to display}}" repo="{{repository name that the repo want to display}}"/]`
 
-## Example Code 
+= Example Code =
 
 1. `[show-repo src="github" user="joytou" repo="WP-Bing-Background"/]`
 2. `[show-repo src="gitee" user="joytouwu" repo="WP-Bing-Background"/]`
 
-## Upgrade Notice 
+= Upgrade Notice =
 
 The './mod/' directory needs to be backed up before updating, it will be overwritten through the system update mechanism.
 
-## Steps to Upgrade 
+= Steps to Upgrade =
 
 1. Back up the plugin directory, deactive the plugin, and then delete the plugin directory before upgrade to new version.
 2. Upload and unzip the new version to its original location, active plugins, plugin configuration sits to automatically inherit.
 
-## Installation 
+== Installation ==
 
 1. Backup and delete the plugin directory and deactive the plugin if you has installed any elder version.
 2. Upload the plugin files to the plugins directory, or install the plugin through the WordPress plugins screen directly.
 3. Activate the plugin through the 'Plugins' screen in WordPress
 
-## Frequently Asked Questions 
+== Frequently Asked Questions ==
 
-### How to extend the other code-managed plant (or the likely service)? 
+= How to extend the other code-managed plant (or the likely service)? =
 
 1. Create a php file in './mod/' directory, and name it to the plant name (format: {{plant name}}.php).
 2. Write the php file content as the following template:
@@ -73,7 +86,7 @@ class SHOW_REPOS_MOD_{{PLANT_NAME}} {
 	{{ptime}} => Repo's last pushed time`
 4. Add the css/js file to the directory './mod/template/css/' / './mod/template/js/' as if needed, and name it(s) to the plant name (format: {{plant name}}.js / {{plant name}}.css)
 
-### I had added the shortcode, but it still does not display or it display the error message. 
+= I had added the shortcode, but it still does not display or it display the error message. =
 
 1. Please ensure there are files in directory './mod/'.
 2. Please check if you write the correct infomation, like src(point to the plant name), user(the repo's owner), repo(the repo).
@@ -81,15 +94,15 @@ class SHOW_REPOS_MOD_{{PLANT_NAME}} {
 4. If it sitll, redownload and active the plugin.
 5. If you have any doubt(s), please email me <joytou.wu@qq.com>.
 
-## Screenshots 
+== Screenshots ==
 
 -null
 
-## Changelog 
+== Changelog ==
 
 = 1.0.0 =
 * The first version.
 
-## Upgrade Notice 
+== Upgrade Notice ==
 
 - The ./mod/ directory needs to be backed up before updating, it will be overwritten through the system update mechanism.
