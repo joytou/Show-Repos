@@ -1,4 +1,5 @@
 # Show-Repos
+
 A WordPress plugin that can make you to show your repo(s) on the wordpress through a simple shortcode. Modular structure, on-demand expansion, open source code. Show the code-managed repositories: GitHub, Gitee.
 
 ## How to Use
@@ -8,6 +9,7 @@ Add the shortcode to anywhere you want to display: `[show-repo src="{{code-manag
 ## Example Code 
 
 1. `[show-repo src="github" user="joytou" repo="WP-Bing-Background"/]`
+
 2. `[show-repo src="gitee" user="joytouwu" repo="WP-Bing-Background"/]`
 
 ## Upgrade Notice 
@@ -17,12 +19,15 @@ The `./mod/` directory needs to be backed up before updating, it will be overwri
 ## Steps to Upgrade 
 
 1. Back up the plugin directory, deactive the plugin, and then delete the plugin directory before upgrade to new version.
+
 2. Upload and unzip the new version to its original location, active plugins, plugin configuration sits to automatically inherit.
 
 ## Installation 
 
 1. Backup and delete the plugin directory and deactive the plugin if you has installed any elder version.
+
 2. Upload the plugin files to the plugins directory, or install the plugin through the WordPress plugins screen directly.
+
 3. Activate the plugin through the 'Plugins' screen in WordPress
 
 ## Frequently Asked Questions 
@@ -30,8 +35,11 @@ The `./mod/` directory needs to be backed up before updating, it will be overwri
 ### How to extend the other code-managed plant (or the likely service)? 
 
 1. Create a php file in `./mod/` directory, and name it to the plant name (format: {{plant name}}.php).
+
 2. Write the php file content as the following template:
-`<?php
+
+`
+<?php
  
 class SHOW_REPOS_MOD_{{PLANT_NAME}} {
  
@@ -79,9 +87,13 @@ class SHOW_REPOS_MOD_{{PLANT_NAME}} {
  
 	}
  
-}`
+}
+`
+
 3. Add and write the html template file in the directory `./mod/template/`, which want to display in the shortcode, and add such label where want to display the specified infomation:
-`	{{name}} => Repo's name
+
+`
+	{{name}} => Repo's name
  
 	{{description}} => Repo's description
  
@@ -107,15 +119,21 @@ class SHOW_REPOS_MOD_{{PLANT_NAME}} {
  
 	{{mtime}} => Repo's last updated time
  
-	{{ptime}} => Repo's last pushed time`
+	{{ptime}} => Repo's last pushed time
+`
+
 4. Add the css/js file to the directory `./mod/template/css/` / `./mod/template/js/` as if needed, and name it(s) to the plant name (format: {{plant name}}.js / {{plant name}}.css)
 
 ### I had added the shortcode, but it still does not display or it display the error message. 
 
 1. Please ensure there are files in directory `./mod/`.
+
 2. Please check if you write the correct infomation, like src(point to the plant name), user(the repo's owner), repo(the repo).
+
 3. If you had modified any file(s), you can modify it(s) to the correct, refer to FAQ 'How to extend the other code-managed plant (or the likely service)?'.
+
 4. If it sitll, redownload and active the plugin.
+
 5. If you have any doubt(s), please email me <joytou.wu@qq.com>.
 
 ## Screenshots 
