@@ -73,6 +73,7 @@
  		'missing_requisite_file' => '<strong>%s</strong>: There are lack necessary file: <strong>%s</strong>',
  		'class_not_exists' => '<strong>%s</strong>: Class <strong>%s</strong> does not exists in the file <em>%s</em>',
  		'not_found_repo' => '<div>%s</div><br/><div>Error code: %d</div><br/><div>Error body: %s</div>',
+ 		'empty_param_in_shortcode' => '<div>Please give a value to the parameter <strong>%s</strong>, instead of leave it blank</div>',
  	);
  	
  	/**
@@ -126,12 +127,6 @@
  					self::debug( __LINE__ );
 					$instance = new $class;
  					self::$instances[ $class ] = $instance;
- 					self::add_settings_error(
- 						'myUniqueIdentifyer',
- 						esc_attr( 'setting_error' ),
- 						'loaded class ' . $class,
- 						'updated'
- 					);
  					self::debug( __LINE__ );
  				}else{
  					self::debug( __LINE__ );
@@ -164,12 +159,20 @@
  		$atts = shortcode_atts(
  			[
  				'src' => 'github',
- 				'user' => 'joytou',
- 				'repo' => 'WP-Bing-Background',
+ 				'user' => '',
+ 				'repo' => '',
  			], 
  			$atts, 
  			$tag
  		);
+ 		foreach( $atts as $k => $v ) {
+ 			if( empty( $v ) ) {
+ 				return sprintf(
+ 					self::$errorMessage[ 'empty_param_in_shortcode' ],
+ 					$k
+ 				);
+ 			}
+ 		}
  		//Get the rendered shortcode's attributes.
  		$classname = strtoupper( $atts[ 'src' ] );
  		$user = $atts[ 'user' ];
@@ -180,7 +183,7 @@
  		//Simulating user normally access the site, some will return 403 forbidden with no header.
  		$response_header = array(
  			'method' => 'GET',
- 			'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+ 			'user-agent' => $_SERVER['HTTP_USER_AGENT'],
  			'header' => array(
  				'Content-Type' => 'application/json;charset=UTF-8',
  			),
@@ -290,3 +293,4 @@
  add_action( 'plugins_loaded', array( 'SHOW_REPOS', 'init' ) );
  add_action( 'wp_head', array( 'SHOW_REPOS', 'load_static_file' ) );
  add_shortcode( 'show-repo', array( 'SHOW_REPOS', 'render_shortcode' ) );
+ add_shortcode( 'show-repos', array( 'SHOW_REPOS', 'render_shortcode' ) );
