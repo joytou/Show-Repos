@@ -25,7 +25,7 @@ Add the shortcode to anywhere you want to display: `[show-repo src="{{code-manag
 
 = Upgrade Notice =
 
-The './mod/' directory needs to be backed up before updating, it will be overwritten through the system update mechanism.
+The `./mod/` directory needs to be backed up before updating, it will be overwritten through the system update mechanism.
 
 = Steps to Upgrade =
 
@@ -44,7 +44,8 @@ The './mod/' directory needs to be backed up before updating, it will be overwri
 
 1. Create a php file in './mod/' directory, and name it to the plant name (format: {{plant name}}.php).
 2. Write the php file content as the following template:
-`<?php
+```
+<?php
 class SHOW_REPOS_MOD_{{PLANT_NAME}} {
 	public $api_url 		= '{{url}}'; //Plant api url that point to repo, usual it is such: https://{{url}}/{:user}/{:repo}
 	public $template_css 	= '{{css_file_url}}'; //Recommend to write it follow the format: css/{{plant name}}.css
@@ -68,9 +69,11 @@ class SHOW_REPOS_MOD_{{PLANT_NAME}} {
 		$data['ptime']			= $original_data['pushed_at'];  //The api struct data key which get the repo's last pushed time.
 		return $data;
 	}
-}`
+}
+```
 3. Add and write the html template file in the directory './mod/template/', which want to display in the shortcode, and add such label where want to display the specified infomation:
-`	{{name}} => Repo's name
+```
+	{{name}} => Repo's name
 	{{description}} => Repo's description
 	{{url}} => Repo's url
 	{{download_url}} => The url that can download the repo
@@ -83,8 +86,9 @@ class SHOW_REPOS_MOD_{{PLANT_NAME}} {
 	{{branch}} => Repo's default branch name
 	{{ctime}} => Repo's created time
 	{{mtime}} => Repo's last updated time
-	{{ptime}} => Repo's last pushed time`
-4. Add the css/js file to the directory './mod/template/css/' / './mod/template/js/' as if needed, and name it(s) to the plant name (format: {{plant name}}.js / {{plant name}}.css)
+	{{ptime}} => Repo's last pushed time
+```
+4. Add the css/js file to the directory `./mod/template/css/` / `./mod/template/js/` as if needed, and name it(s) to the plant name (format: {{plant name}}.js / {{plant name}}.css)
 
 = I had added the shortcode, but it still does not display or it display the error message. =
 
@@ -96,7 +100,9 @@ class SHOW_REPOS_MOD_{{PLANT_NAME}} {
 
 == Screenshots ==
 
--null
+1. Final screen in wider screen
+2. Final screen in narrow screen
+3. Example shortcode
 
 == Changelog ==
 
@@ -105,4 +111,4 @@ class SHOW_REPOS_MOD_{{PLANT_NAME}} {
 
 == Upgrade Notice ==
 
-- The ./mod/ directory needs to be backed up before updating, it will be overwritten through the system update mechanism.
+- The `./mod/` directory needs to be backed up before updating, it will be overwritten through the system update mechanism.
