@@ -3,7 +3,7 @@ Contributors: joytou
 Tags: github, gitee, repository, git
 Requires at least: 5.0
 Tested up to: 5.4
-Stable tag: 1.0
+Stable tag: 1.1
 Requires PHP: 5.4
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -25,12 +25,16 @@ Add the shortcode to anywhere you want to display: `[show-repo src="{{code-manag
 
 = Upgrade Notice =
 
-The `./mod/` directory needs to be backed up before updating, it will be overwritten through the system update mechanism.
+The './mod/' directory needs to be backed up before updating, it will be overwritten through the system update mechanism.
 
 = Steps to Upgrade =
 
 1. Back up the plugin directory, deactive the plugin, and then delete the plugin directory before upgrade to new version.
 2. Upload and unzip the new version to its original location, active plugins, plugin configuration sits to automatically inherit.
+
+= Contribute =
+
+Welcome to help to improve the plugin if you have any idea or you had caught any bug. Please email me <joytou.wu@qq.com>. Thanks~
 
 == Installation ==
 
@@ -44,8 +48,7 @@ The `./mod/` directory needs to be backed up before updating, it will be overwri
 
 1. Create a php file in './mod/' directory, and name it to the plant name (format: {{plant name}}.php).
 2. Write the php file content as the following template:
-```
-<?php
+`<?php
 class SHOW_REPOS_MOD_{{PLANT_NAME}} {
 	public $api_url 		= '{{url}}'; //Plant api url that point to repo, usual it is such: https://{{url}}/{:user}/{:repo}
 	public $template_css 	= '{{css_file_url}}'; //Recommend to write it follow the format: css/{{plant name}}.css
@@ -69,11 +72,9 @@ class SHOW_REPOS_MOD_{{PLANT_NAME}} {
 		$data['ptime']			= $original_data['pushed_at'];  //The api struct data key which get the repo's last pushed time.
 		return $data;
 	}
-}
-```
+}`
 3. Add and write the html template file in the directory './mod/template/', which want to display in the shortcode, and add such label where want to display the specified infomation:
-```
-	{{name}} => Repo's name
+`	{{name}} => Repo's name
 	{{description}} => Repo's description
 	{{url}} => Repo's url
 	{{download_url}} => The url that can download the repo
@@ -86,9 +87,8 @@ class SHOW_REPOS_MOD_{{PLANT_NAME}} {
 	{{branch}} => Repo's default branch name
 	{{ctime}} => Repo's created time
 	{{mtime}} => Repo's last updated time
-	{{ptime}} => Repo's last pushed time
-```
-4. Add the css/js file to the directory `./mod/template/css/` / `./mod/template/js/` as if needed, and name it(s) to the plant name (format: {{plant name}}.js / {{plant name}}.css)
+	{{ptime}} => Repo's last pushed time`
+4. Add the css/js file to the directory './mod/template/css/' / './mod/template/js/' as if needed, and name it(s) to the plant name (format: {{plant name}}.js / {{plant name}}.css)
 
 = I had added the shortcode, but it still does not display or it display the error message. =
 
@@ -100,15 +100,16 @@ class SHOW_REPOS_MOD_{{PLANT_NAME}} {
 
 == Screenshots ==
 
-1. Final screen in wider screen
-2. Final screen in narrow screen
-3. Example shortcode
+1. In PC.
+2. In mobile.
+3. Shortcode.
 
 == Changelog ==
 
-= 1.0.0 =
-* The first version.
+= 1.1.2 =
+* Add translation supportted, for locale.
+* Add api data cache function, and can clear the cache(in the setting screen: General Settings -> Show Repos). Of course, it is optional.
 
 == Upgrade Notice ==
 
-- The `./mod/` directory needs to be backed up before updating, it will be overwritten through the system update mechanism.
+- The ./mod/ directory needs to be backed up before updating, it will be overwritten through the system update mechanism.

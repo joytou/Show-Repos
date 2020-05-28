@@ -1,0 +1,92 @@
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Project-Id-Version: Show Repos\n"
+"POT-Creation-Date: 2020-05-23 12:16+0800\n"
+"PO-Revision-Date: 2020-05-23 14:56+0800\n"
+"Last-Translator: Joytou Wu<joytou.wu@qq.com>\n"
+"Language-Team: Chinese (simplified) <i18n-zh@googlegroups.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.1\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: show-repos.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"Language: zh_CN\n"
+
+#. Plugin Name of the plugin
+#: show-repos.php:41 show-rrpos.php:423 show-repos.php:514
+msgid "Show Repos"
+msgstr "Show Repos"
+
+#: show-repos.php:70
+msgid "Expire Time"
+msgstr "过期时间"
+
+#: show-repos.php:73
+msgid ""
+"The time of the cache data of the repo api to live. Set to 0 to keep it "
+"always be the latest."
+msgstr "repo api数据的缓存时间。设置为0则永远获取实时数据。"
+
+#: show-repos.php:89
+msgid "<strong>%s</strong>: There are lack necessary file: <strong>%s</strong>"
+msgstr "<strong>%s</strong>：缺少必要文件：<strong>%s</strong>"
+
+#: show-repos.php:90
+msgid ""
+"<strong>%s</strong>: Class <strong>%s</strong> does not exists in the file "
+"<em>%s</em>"
+msgstr "<strong>%s</strong>：文件<em>%s</em>不存在类<strong>%s</strong>"
+
+#: show-repos.php:91
+msgid ""
+"<div>%s</div><br/><div>Error code: %d</div><br/><div>Error body: %s</div>"
+msgstr "<div>%s</div><br/><div>错误代码：%d</div><br/><div>错误信息：%s</div>"
+
+#: show-repos.php:92
+msgid ""
+"<div>Please give a value to the parameter <strong>%s</strong>, instead of "
+"leave it blank</div>"
+msgstr "<div>参数<strong>%s</strong>不能为空白，请赋值</div>"
+
+#: show-repos.php:422 show-repos.php:470
+msgid "Show Repos Setting"
+msgstr "Show Repos设置"
+
+#: show-repos.php:444
+msgid "Save"
+msgstr "保存"
+
+#: show-repos.php:447
+msgid "Clear Cache"
+msgstr "清除缓存"
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+msgid "http://www.xn--irr040d121a.cn/"
+msgstr "http://www.吴锐涛.cn/"
+
+#. Description of the plugin
+msgid "Show your repo(s) on the wordpress through a simple shortcode."
+msgstr "通过一段简短的代码，在你的wordpress上展示你的Repo"
+
+#. Author of the plugin
+msgid "Joytou Wu"
+msgstr "吴锐涛"
+
+#. Short description
+msgid ""
+"Show your repo(s) on the wordpress through a simple shortcode. Modular "
+"structure, on-demand expansion, open source code. Show the code-managed "
+"repositories: GitHub, Gitee."
+msgstr ""
+"通过一段简短的代码，让你的wordpress可以展示你的Repo。模块化结构，"
+"按需扩展，开源。目前可展示以下源的Repo：GitHub，Gitee。"

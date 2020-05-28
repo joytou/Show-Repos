@@ -1,0 +1,6 @@
+= 1.1.2 =
+* Add translation supportted, for locale.
+* Add api data cache function, and can clear the cache(in the setting screen: General Settings -> Show Repos). Of course, it is optional.
+
+= 1.0.0 =
+* The first version.
